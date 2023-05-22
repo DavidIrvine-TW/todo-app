@@ -9,12 +9,14 @@ function TodoForm(props) {
     console.log(enteredTodo);
   };
 
+  let idCounter = 5;
+
   const submitHandler = (event) => {
     event.preventDefault();
     if (enteredTodo.length > 0) {
       setValidTodo(true);
       const todoData = {
-        id: Math.random().toString(),
+        id: String(++idCounter),
         todo: enteredTodo.trim(),
         completed: false,
       };

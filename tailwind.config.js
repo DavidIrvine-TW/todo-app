@@ -21,11 +21,12 @@ export default {
         //darkmode
         'vdarkblue' : 'hsl(235, 21%, 11%)',
         'vdarkdesatblue': 'hsl(235, 24%, 19%)',
-        'lghtgrayblue' : 'hsl(234, 39%, 85%)',
+        'dlghtgrayblue' : 'hsl(234, 39%, 85%)',
         'hovlghtgrayblue' : 'hsl(236, 33%, 92%)',
         'darkgrayblue' : 'hsl(234, 11%, 52%)',
         'vdarkgrayblue': 'hsl(233, 14%, 35%)',
         'vdarkgrayblue2' : 'hsl(237, 14%, 26%)',
+        'footer': 'hsla(235, 16%, 43%, 1)'
       },
       screens: {
         mobile: '375px',

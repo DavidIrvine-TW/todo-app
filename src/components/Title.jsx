@@ -3,7 +3,7 @@ import sun from "../assets/icon-sun.svg";
 
 function Title(props) {
   return (
-    <div className="mt-[4.375em] mb-[2.5em] flex justify-between items-center h-[48px] w-[540px] tablet:w-[327px]">
+    <div className="mt-[4.375em] mb-[2.5em] flex justify-between items-center h-[48px] desktop:w-[540px] mobile:w-[327px]">
       <h1 className="font-joe h-[48px] text-heading-dk tracking-[0.4em] font-bold text-lightgray">
         TODO
       </h1>

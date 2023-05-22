@@ -4,6 +4,7 @@ import Newtodo from "./components/Newtodo";
 import Todos from "./components/Todos";
 import { useState, useEffect } from "react";
 import useToggle from "./components/useToggle";
+import Footer from "./components/Footer";
 
 const DATA = [
   { id: "1", todo: "Go to the gym", completed: false },
@@ -17,11 +18,11 @@ function App() {
   const [filterMode, setFilterMode] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState(DATA);
   const [todos, setTodos] = useState(DATA);
+  console.log(todos)
 
   const [isDarkTheme, toggleMode] = useToggle(
     localStorage.getItem("theme-color") === "dark"
   );
-  console.log(todos);
 
   useEffect(() => {
     document.documentElement.className = isDarkTheme ? "dark" : "";
@@ -62,6 +63,7 @@ function App() {
           setFilterMode={setFilterMode}
         />
       </main>
+      <Footer/>
     </>
   );
 }
