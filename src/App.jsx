@@ -5,6 +5,7 @@ import Todos from "./components/Todos";
 import { useState, useEffect } from "react";
 import useToggle from "./components/useToggle";
 import Footer from "./components/Footer";
+import TodoFilterMobile from "./components/TodoFilterMobile";
 
 const DATA = [
   { id: "1", todo: "Go to the gym", completed: false },
@@ -62,6 +63,7 @@ function App() {
           filterMode={filterMode}
           setFilterMode={setFilterMode}
         />
+        <TodoFilterMobile filterMode={filterMode} setFilterMode={setFilterMode}/>
       </main>
       <Footer/>
     </>

@@ -30,7 +30,7 @@ export default {
       },
       screens: {
         mobile: '375px',
-        desktop: '817px'
+        desktop: '600px'
       },
       container: {
         center: true
@@ -40,7 +40,7 @@ export default {
       },
       fontSize: {
         'heading-dk': '2.5rem',
-        'heading-mb': '1.25rem',
+        'heading-mb': '1.5rem',
 
         'body-dk': '1.125rem',
         'body-mb': '0.75rem',

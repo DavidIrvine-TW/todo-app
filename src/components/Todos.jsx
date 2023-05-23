@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import TodoItem from "./TodoItem";
 import TodoFilters from "./TodoFilters";
+import TodoFilterMobile from "./TodoFilterMobile";
 import { DragDropContext, Droppable } from '@hello-pangea/dnd'
 
 function todos({ todos, setTodos, filteredTodos, filterMode, setFilterMode }) {
@@ -31,7 +32,7 @@ function todos({ todos, setTodos, filteredTodos, filterMode, setFilterMode }) {
 
   
 return (
-    <div className="mt-[1.5em] bg-white dark:bg-vdarkdesatblue rounded shadow-boxshadowlight dark:shadow-boxshadowdark overflow-hidden transition-all ">
+    <div className="mt-[1.5em] desktop:w-[540px] w-[327px] bg-white dark:bg-vdarkdesatblue rounded shadow-boxshadowlight dark:shadow-boxshadowdark overflow-hidden transition-all ">
       {filteredTodos.length < 1 ? <p className="bg-inherit w-[540px] h-[64px] py-[1.25em] px-[1.5em] flex border-b-[1px] border-vlghtgrayblue dark:border-vdarkgrayblue2 transition-transform text-vdgrayblue dark:text-lghtgrayblue text-center">
           There's no {overviewText}</p> : ""} 
 
@@ -55,11 +56,11 @@ return (
           </p>
         </div>
 
-        <div className="flex gap-[1em]">
+        <div>
           <TodoFilters filterMode={filterMode} setFilterMode={setFilterMode} />
         </div>
         <div>
-          <button onClick={clearComp}>Clear Completed</button>
+          <button className="completedBtn" onClick={clearComp}>Clear Completed</button>
         </div>
       </div>
     </div>

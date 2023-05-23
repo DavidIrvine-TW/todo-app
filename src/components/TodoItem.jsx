@@ -40,7 +40,7 @@ function TodoItem({ todo, todos, setTodos, index }) {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          className={`bg-inherit w-[540px] h-[64px] py-[1.25em] px-[1.5em] flex border-b-[1px] border-vlghtgrayblue dark:border-vdarkgrayblue2 bg-white dark:bg-vdarkdesatblue transition-transform`}
+          className={`bg-inherit w-[327px] h-[53px] desktop:w-[540px] desktop:h-[64px] py-[0.875em] px-[1.25em] desktop:py-[1.5em] desktop:px-[1.5em] flex border-b-[1px] border-vlghtgrayblue dark:border-vdarkgrayblue2 bg-white dark:bg-vdarkdesatblue transition-transform`}
         >
           <input
             id={todo.id}
@@ -52,21 +52,21 @@ function TodoItem({ todo, todos, setTodos, index }) {
           <span
             className={`${
               toggleItem ? gradient : ""
-            } w-[24px] h-[24px] border border-lghtgrayblue dark:border-darkgrayblue rounded-full mr-[1.5em] flex align-center justify-center cursor-pointer`}
+            } desktop:w-[24px] desktop:h-[24px] w-[20px] h-[20px] border border-lghtgrayblue dark:border-darkgrayblue rounded-full mr-[1.5em] flex align-center justify-center cursor-pointer`}
             onClick={handleSpanClick}
           >
             {toggleItem ? <img src={check} alt="check Icon" /> : ""}
           </span>
 
           <div>
-            <p className={`${compTodoClass} text-body-dk`}>
+            <p className={`${compTodoClass} desktop:mt-[0px] mt-[5px] text-[0.75rem] desktop:text-body-dk`}>
               {mutableTodo.todo}
             </p>
           </div>
 
           <div className="ml-auto cursor-pointer">
             {toggleItem ? (
-              <img src={cross} alt="crossIcon" onClick={handleCrossClick} />
+              <img className="desktop:w-[18px] desktop:h-[18px] w-[12px] h-[12px] mt-[5px] desktop:mt-[0px]"src={cross} alt="crossIcon" onClick={handleCrossClick} />
             ) : (
               ""
             )}
