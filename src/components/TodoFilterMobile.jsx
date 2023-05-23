@@ -1,4 +1,3 @@
-import React from "react";
 
 function TodoFilterMobile({ filterMode, setFilterMode }) {
   const handleClick = (mode) => {

@@ -11,7 +11,7 @@ function Background(props) {
       <picture>
         <source
           srcSet={props.isDarkTheme ? bgdeskd : bgdeskl}
-          media="(min-width: 376px)"
+          media="(min-width: 600px)"
         />
         <img
           className="backpic"
